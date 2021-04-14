@@ -1,0 +1,5 @@
+C:\Users\Sofia\Downloads\1er Cuatri 2021\Proyecto Software\Repo Proyecto Software\PetsLife_Adoptions\PetsLife-Adoptions.Api\AccessData\bin\Debug\netcoreapp3.1\Application.dll
+C:\Users\Sofia\Downloads\1er Cuatri 2021\Proyecto Software\Repo Proyecto Software\PetsLife_Adoptions\PetsLife-Adoptions.Api\AccessData\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Sofia\Downloads\1er Cuatri 2021\Proyecto Software\Repo Proyecto Software\PetsLife_Adoptions\PetsLife-Adoptions.Api\AccessData\obj\Debug\netcoreapp3.1\AccessData.csprojAssemblyReference.cache
+C:\Users\Sofia\Downloads\1er Cuatri 2021\Proyecto Software\Repo Proyecto Software\PetsLife_Adoptions\PetsLife-Adoptions.Api\AccessData\obj\Debug\netcoreapp3.1\AccessData.AssemblyInfoInputs.cache
+C:\Users\Sofia\Downloads\1er Cuatri 2021\Proyecto Software\Repo Proyecto Software\PetsLife_Adoptions\PetsLife-Adoptions.Api\AccessData\obj\Debug\netcoreapp3.1\AccessData.AssemblyInfo.cs
