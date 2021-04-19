@@ -1,0 +1,12 @@
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\bin\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.deps.json
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\bin\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.dll
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.csprojAssemblyReference.cache
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.AssemblyInfoInputs.cache
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.AssemblyInfo.cs
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\bin\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.runtimeconfig.json
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\bin\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.runtimeconfig.dev.json
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.genruntimeconfig.cache
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\bin\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.pdb
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.dll
+C:\Users\Sofia\Documents\Practica .net Orm\PetsLife_Adoptions.Api\PetsLife_Adoptions.Domain\obj\Debug\netcoreapp3.1\PetsLife_Adoptions.Domain.pdb
