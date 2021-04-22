@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace PetsLife_Adoptions.Domain.Entities
 {
-    class AdoptanteMascota
+    public class AdoptanteMascota
     {
+        public int Id { get; set; }
+        public int MascotaID { get; set; }
+        public int AdoptanteId { get; set; }
     }
 }

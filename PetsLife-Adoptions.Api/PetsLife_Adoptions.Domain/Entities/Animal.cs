@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PetsLife_Adoptions.Domain.Entities
 {
-    class Animal
+    public class Animal
     {
+        public int TipoAnimalId { get; set; }
+        public string TipoAnimal { get; set; }
     }
 }

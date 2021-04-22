@@ -14,7 +14,10 @@ namespace PetsLife_Adoptions.Domain.Entities
         public string Telefono { get; set; }
         public string Email { get; set; }
         public List<AdoptanteMascota> AdoptanteMascota { get; set; }
+<<<<<<< HEAD
 
+=======
+>>>>>>> entities
 
     }
 }
