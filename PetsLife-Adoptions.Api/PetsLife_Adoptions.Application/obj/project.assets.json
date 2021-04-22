@@ -5818,39 +5818,42 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jose.bravo\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\German\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jose.bravo\\proyecto-software\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\PetsLife_Adoptions.Application.csproj",
+      "projectUniqueName": "G:\\Universidad\\Proyecto Software\\Proyecto_PetsLife\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\PetsLife_Adoptions.Application.csproj",
       "projectName": "PetsLife_Adoptions.Application",
-      "projectPath": "C:\\Users\\jose.bravo\\proyecto-software\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\PetsLife_Adoptions.Application.csproj",
-      "packagesPath": "C:\\Users\\jose.bravo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jose.bravo\\proyecto-software\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\obj\\",
+      "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto_PetsLife\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\PetsLife_Adoptions.Application.csproj",
+      "packagesPath": "C:\\Users\\German\\.nuget\\packages\\",
+      "outputPath": "G:\\Universidad\\Proyecto Software\\Proyecto_PetsLife\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jose.bravo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\German\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/asociart/8e6af842-77ee-48bd-b7ea-3bc30d15fad2/_packaging/PackageNuget/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\jose.bravo\\proyecto-software\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\PetsLife_Adoptions.Domain.csproj": {
-              "projectPath": "C:\\Users\\jose.bravo\\proyecto-software\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\PetsLife_Adoptions.Domain.csproj"
+            "G:\\Universidad\\Proyecto Software\\Proyecto_PetsLife\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\PetsLife_Adoptions.Domain.csproj": {
+              "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto_PetsLife\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\PetsLife_Adoptions.Domain.csproj"
             }
           }
         }
@@ -5901,7 +5904,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
