@@ -77,10 +77,11 @@ namespace PetsLife_Adoptions.AccessData
 
             modelBuilder.Entity<Mascota>()
                 .HasKey(s => s.MascotaId)
-                .HasName("AdoptanteId");
+                .HasName("MascotaId");
             modelBuilder.Entity<Mascota>()
-                .Property(s => s.AnimalId)
-                .IsRequired();
+                .HasOne<Animal>(s => s.Animales)
+                .WithOne(g => g.Mascotas)
+                .HasForeignKey<Mascota>(s => s.AnimalId);
             modelBuilder.Entity<Mascota>()
                 .Property(s => s.Imagen)
                 .IsRequired();
@@ -93,6 +94,7 @@ namespace PetsLife_Adoptions.AccessData
             modelBuilder.Entity<Mascota>()
                 .Property(s => s.Peso)
                 .IsRequired();
+
 
 
 
