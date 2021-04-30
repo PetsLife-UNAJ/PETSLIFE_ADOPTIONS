@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PetsLife_Adoptions.Domain\PetsLife_Adoptions.Domain.csproj" />
+    <ProjectReference Include="..\PetsLife_Adoptions.Application\Application.csproj" />
+    <ProjectReference Include="..\PetsLife_Adoptions.Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
