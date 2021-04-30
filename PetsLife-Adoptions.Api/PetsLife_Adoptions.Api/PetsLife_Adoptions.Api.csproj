@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PetsLife_Adoptions.AccessData\PetsLife_Adoptions.AccessData.csproj" />
-    <ProjectReference Include="..\PetsLife_Adoptions.Application\PetsLife_Adoptions.Application.csproj" />
+    <ProjectReference Include="..\PetsLife_Adoptions.AccessData\AccessData.csproj" />
+    <ProjectReference Include="..\PetsLife_Adoptions.Application\Application.csproj" />
   </ItemGroup>
 
 

@@ -10,5 +10,6 @@ namespace PetsLife_Adoptions.Domain.Entities
     {
         public int TipoAnimalId { get; set; }
         public string TipoAnimal { get; set; }
+        public Mascota Mascotas { get; set; }
     }
 }

@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetsLife_Adoptions.Api", "PetsLife_Adoptions.Api\PetsLife_Adoptions.Api.csproj", "{CCB0F465-4E95-4D6C-B6E0-118D9D51471E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetsLife_Adoptions.Application", "PetsLife_Adoptions.Application\PetsLife_Adoptions.Application.csproj", "{F89217B8-EEA5-4D47-B3A2-F4D214377563}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "PetsLife_Adoptions.Application\Application.csproj", "{F89217B8-EEA5-4D47-B3A2-F4D214377563}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetsLife_Adoptions.Domain", "PetsLife_Adoptions.Domain\PetsLife_Adoptions.Domain.csproj", "{348E0C87-2CE5-4B24-AE7A-DCAC060AC174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "PetsLife_Adoptions.Domain\Domain.csproj", "{348E0C87-2CE5-4B24-AE7A-DCAC060AC174}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetsLife_Adoptions.AccessData", "PetsLife_Adoptions.AccessData\PetsLife_Adoptions.AccessData.csproj", "{FAD5E48C-3154-4FB5-B63E-B325EA597AD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessData", "PetsLife_Adoptions.AccessData\AccessData.csproj", "{FAD5E48C-3154-4FB5-B63E-B325EA597AD7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetsLife_Adoptions.Test", "PetsLife_Adoptions.Test\PetsLife_Adoptions.Test.csproj", "{CAF4816C-0A3F-403C-B683-92282A089A01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "PetsLife_Adoptions.Test\Test.csproj", "{CAF4816C-0A3F-403C-B683-92282A089A01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
