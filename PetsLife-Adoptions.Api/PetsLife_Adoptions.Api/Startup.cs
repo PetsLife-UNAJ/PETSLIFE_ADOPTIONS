@@ -30,7 +30,7 @@ namespace PetsLife_Adoptions.Api
         {
             services.AddControllers();
             var connectionString = Configuration.GetSection("connectionString").Value;
-            services.AddDbContext<PetsLife_AdoptionDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<AdoptionDbContext>(options => options.UseSqlServer(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
