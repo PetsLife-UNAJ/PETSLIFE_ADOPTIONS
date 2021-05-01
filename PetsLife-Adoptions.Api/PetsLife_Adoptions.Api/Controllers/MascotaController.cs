@@ -21,10 +21,11 @@ namespace PetsLife_Adoptions.Api.Controllers
             this._service = service;
         }
         [HttpPost]
-        //[ProducesResponseType(StatusCodes.Status201Created)]
-        public Mascota post(MascotaDto mascotaDto)
+        
+        public IActionResult post(MascotaDto mascotaDto)
         {
-            return _service.CreateMascota(mascotaDto);
+            return new JsonResult(_service.CreateMascota(mascotaDto)) {StatusCode = 201 };
         }
+        
     }
 }
