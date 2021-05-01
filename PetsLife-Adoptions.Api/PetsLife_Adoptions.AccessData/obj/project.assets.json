@@ -1520,21 +1520,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.5",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
-        },
-        "compile": {
-          "bin/placeholder/Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Application.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5817,11 +5802,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Application/1.0.0": {
-      "type": "project",
-      "path": "../PetsLife_Adoptions.Application/Application.csproj",
-      "msbuildProject": "../PetsLife_Adoptions.Application/Application.csproj"
-    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../PetsLife_Adoptions.Domain/Domain.csproj",
@@ -5830,7 +5810,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Application >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.5",
@@ -5873,9 +5852,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\Application.csproj": {
-              "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\Application.csproj"
-            },
             "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
               "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
             }

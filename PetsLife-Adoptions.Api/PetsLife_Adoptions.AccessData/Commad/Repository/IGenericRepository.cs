@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Commands
+namespace AccessData.Commad.Repository
 {
     public interface IGenericRepository
     {

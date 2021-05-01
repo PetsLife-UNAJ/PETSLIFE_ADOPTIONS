@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PetsLife_Adoptions.AccessData\AccessData.csproj" />
     <ProjectReference Include="..\PetsLife_Adoptions.Domain\Domain.csproj" />
   </ItemGroup>
 

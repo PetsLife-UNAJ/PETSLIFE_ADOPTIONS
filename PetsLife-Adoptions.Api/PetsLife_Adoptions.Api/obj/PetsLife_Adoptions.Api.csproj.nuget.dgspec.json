@@ -34,9 +34,6 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\Application.csproj": {
-                "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\Application.csproj"
-              },
               "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
                 "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
               }
@@ -215,6 +212,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj": {
+                "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj"
+              },
               "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
                 "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
               }

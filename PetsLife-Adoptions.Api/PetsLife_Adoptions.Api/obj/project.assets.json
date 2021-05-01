@@ -1524,7 +1524,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Application": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
@@ -1540,6 +1539,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AccessData": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
