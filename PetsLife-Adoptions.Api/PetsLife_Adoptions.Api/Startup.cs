@@ -13,6 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Domain.Commands;
+using AccessData.Commad;
+using Application.Services;
 
 namespace PetsLife_Adoptions.Api
 {
@@ -31,6 +34,9 @@ namespace PetsLife_Adoptions.Api
             services.AddControllers();
             var connectionString = Configuration.GetSection("connectionString").Value;
             services.AddDbContext<AdoptionDbContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddTransient<IGenericRepository, GenericRepository>();
+            services.AddTransient<IMascotaService , MascotaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
