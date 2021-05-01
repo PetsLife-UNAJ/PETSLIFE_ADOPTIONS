@@ -20,11 +20,7 @@ namespace PetsLife_Adoptions.AccessData
         public DbSet<Animal> Animales { get; set; }
         public DbSet<AdoptanteMascota> AdoptanteMascotas { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("server = localhost; Database = PetsLife_Adoption_Db ; Trusted_Connection = True; MultipleActiveResultSets = True");
-        }
-
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder ) 
         {
 
