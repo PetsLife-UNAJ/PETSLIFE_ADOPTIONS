@@ -18,6 +18,7 @@ using Microsoft.Extensions.Logging;
 using Application.Services;
 using AccessData.Commad.Repository;
 using AccessData.Commad;
+using Microsoft.OpenApi.Models;
 
 namespace PetsLife_Adoptions.Api
 {
@@ -37,6 +38,11 @@ namespace PetsLife_Adoptions.Api
             var connectionString = Configuration.GetSection("connectionString").Value;
             services.AddDbContext<AdoptionDbContext>(options => options.UseSqlServer(connectionString));
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PetsLife", Version = "v1" });
+            });
+
             services.AddTransient<IGenericRepository, GenericRepository>();
             services.AddTransient<IMascotaService , MascotaService>();
         }
@@ -47,6 +53,8 @@ namespace PetsLife_Adoptions.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PetsLife v1"));
             }
 
             app.UseHttpsRedirection();
