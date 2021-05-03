@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Queries\" />
+    <Compile Remove="Commands\**" />
+    <EmbeddedResource Remove="Commands\**" />
+    <None Remove="Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Queries\Repository\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PetsLife_Adoptions.Application\Application.csproj" />
     <ProjectReference Include="..\PetsLife_Adoptions.Domain\Domain.csproj" />
   </ItemGroup>
 

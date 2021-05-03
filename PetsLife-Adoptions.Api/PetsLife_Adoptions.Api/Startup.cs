@@ -14,6 +14,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+
+using Application.Services;
+using AccessData.Commad.Repository;
+using AccessData.Commad;
+using Microsoft.OpenApi.Models;
+
 namespace PetsLife_Adoptions.Api
 {
     public class Startup
@@ -30,7 +36,15 @@ namespace PetsLife_Adoptions.Api
         {
             services.AddControllers();
             var connectionString = Configuration.GetSection("connectionString").Value;
-            services.AddDbContext<AdoptionDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PetsLife", Version = "v1" });
+            });
+
+            services.AddTransient<IGenericRepository, GenericRepository>();
+            services.AddTransient<IMascotaService , MascotaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +53,8 @@ namespace PetsLife_Adoptions.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PetsLife v1"));
             }
 
             app.UseHttpsRedirection();

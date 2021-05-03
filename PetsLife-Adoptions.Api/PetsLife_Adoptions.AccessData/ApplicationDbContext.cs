@@ -7,9 +7,9 @@ using System.Text;
 
 namespace PetsLife_Adoptions.AccessData
 {
-    public class AdoptionDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public AdoptionDbContext(DbContextOptions<AdoptionDbContext> options
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             ) : base(options)
         {
 
@@ -20,11 +20,7 @@ namespace PetsLife_Adoptions.AccessData
         public DbSet<Animal> Animales { get; set; }
         public DbSet<AdoptanteMascota> AdoptanteMascotas { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("server = localhost; Database = PetsLife_Adoption_Db ; Trusted_Connection = True; MultipleActiveResultSets = True");
-        }
-
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder ) 
         {
 

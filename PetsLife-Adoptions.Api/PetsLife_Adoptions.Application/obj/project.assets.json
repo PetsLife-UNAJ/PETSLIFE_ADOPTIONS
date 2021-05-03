@@ -1520,6 +1520,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AccessData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
+        },
+        "compile": {
+          "bin/placeholder/AccessData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccessData.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5802,6 +5817,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AccessData/1.0.0": {
+      "type": "project",
+      "path": "../PetsLife_Adoptions.AccessData/AccessData.csproj",
+      "msbuildProject": "../PetsLife_Adoptions.AccessData/AccessData.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../PetsLife_Adoptions.Domain/Domain.csproj",
@@ -5810,6 +5830,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AccessData >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.5",
@@ -5852,6 +5873,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj": {
+              "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj"
+            },
             "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
             }

@@ -16,8 +16,8 @@ namespace PetsLife_Adoptions.AccessData.Configurations
                 .HasKey(s => s.MascotaId);
             modelBuilder
                 .HasOne<Animal>(s => s.Animales)
-                .WithOne(g => g.Mascotas)
-                .HasForeignKey<Mascota>(s => s.AnimalId);
+                .WithMany(g => g.Mascotas).HasForeignKey(j => j.AnimalId);
+                
             modelBuilder
                 .Property(s => s.Imagen)
                 .IsRequired();

@@ -5805,11 +5805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Carlos\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Carlos\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
