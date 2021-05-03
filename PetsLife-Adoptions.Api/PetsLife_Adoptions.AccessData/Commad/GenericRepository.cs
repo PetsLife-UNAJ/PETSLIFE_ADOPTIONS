@@ -8,6 +8,7 @@ using AccessData.Commad.Repository;
 using PetsLife_Adoptions.AccessData;
 using PetsLife_Adoptions.Domain.Entities;
 
+
 namespace AccessData.Commad
 {
     public class GenericRepository : IGenericRepository 
@@ -26,7 +27,6 @@ namespace AccessData.Commad
 
         public void Update<T>(T entity) 
         {
-            
             _context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _context.SaveChanges();
         }

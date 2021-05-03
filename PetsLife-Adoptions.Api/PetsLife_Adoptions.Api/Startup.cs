@@ -41,6 +41,11 @@ namespace PetsLife_Adoptions.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PetsLife", Version = "v1" });
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AnyAllow", policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
+
             services.AddTransient<IGenericRepository, GenericRepository>();
             services.AddTransient<IMascotaService , MascotaService>();
         }
@@ -54,6 +59,7 @@ namespace PetsLife_Adoptions.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PetsLife v1"));
             }
+            app.UseCors("AnyAllow");
 
             app.UseHttpsRedirection();
 
