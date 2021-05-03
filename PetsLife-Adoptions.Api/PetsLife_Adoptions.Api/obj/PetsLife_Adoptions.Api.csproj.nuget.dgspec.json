@@ -73,6 +73,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.5, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[2.3.2, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[2.3.2, )"
             }
           },
           "imports": [

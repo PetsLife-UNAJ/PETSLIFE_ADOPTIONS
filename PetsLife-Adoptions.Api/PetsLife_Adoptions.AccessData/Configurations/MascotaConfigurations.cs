@@ -30,6 +30,9 @@ namespace PetsLife_Adoptions.AccessData.Configurations
             modelBuilder
                 .Property(s => s.Peso)
                 .IsRequired();
+            modelBuilder
+                .Property(s => s.Historia)
+                .IsRequired();
         }
     }
 }

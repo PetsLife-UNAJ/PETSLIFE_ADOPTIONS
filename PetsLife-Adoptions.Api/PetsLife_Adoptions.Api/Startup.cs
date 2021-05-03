@@ -17,6 +17,12 @@ using Application.Services;
 using AccessData.Commad.Repository;
 using AccessData.Commad;
 using Microsoft.OpenApi.Models;
+using SqlKata.Compilers;
+using System.Data;
+using Microsoft.Data.SqlClient;
+using AccessData.Queries.Repository;
+using AccessData.Queries;
+using SqlConnection = Microsoft.Data.SqlClient.SqlConnection;
 
 namespace PetsLife_Adoptions.Api
 {
@@ -32,22 +38,34 @@ namespace PetsLife_Adoptions.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Configuracion Sql ConnectionString
             services.AddControllers();
             var connectionString = Configuration.GetSection("connectionString").Value;
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
+            //Configuracion Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PetsLife", Version = "v1" });
             });
 
+            //Configuracion Cors
             services.AddCors(options =>
             {
                 options.AddPolicy("AnyAllow", policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
+            //Ijecciones de dependencias
             services.AddTransient<IGenericRepository, GenericRepository>();
             services.AddTransient<IMascotaService , MascotaService>();
+            services.AddTransient<IMascotaQuery, MascotaQuery>();
+           
+            //Configuracion SqlKata
+            services.AddTransient<Compiler, SqlServerCompiler>();
+            services.AddTransient<IDbConnection>(b =>
+            {
+                return new SqlConnection(connectionString);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

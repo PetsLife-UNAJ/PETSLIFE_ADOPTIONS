@@ -12,17 +12,16 @@ namespace PetsLife_Adoptions.Api.Controllers
 {
     [ApiController]
     [Route("api/Mascota")]
-    
+
     public class MascotaController : ControllerBase
     {
         private readonly IMascotaService _service;
-        public MascotaController(IMascotaService service )
+        public MascotaController(IMascotaService service)
         {
             this._service = service;
         }
         [HttpPost]
-        
-        public IActionResult post(MascotaDto mascotaDto)
+        public IActionResult Post(MascotaDto mascotaDto)
         {
             try
             {
@@ -33,8 +32,51 @@ namespace PetsLife_Adoptions.Api.Controllers
 
                 return BadRequest(e.Message);
             }
-            
+
         }
-        
+
+        [HttpGet("All")]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                return new JsonResult(_service.GetMascotas()) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+
+        }
+        [HttpGet("{id}")]
+        public ActionResult GetById(int id)
+        {
+            try
+            {
+                return new JsonResult(_service.GetMascota(id)) { StatusCode = 200 };
+            }
+            catch (Exception )
+            {
+
+                return BadRequest("No se encuentra en la base de datos");
+            }
+
+
+        }
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                _service.DeleteMascota(id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("No se encuentra en la base de datos");
+            }
+        }
     }
 }

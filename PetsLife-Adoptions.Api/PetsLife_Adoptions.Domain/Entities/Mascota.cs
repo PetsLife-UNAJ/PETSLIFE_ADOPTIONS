@@ -11,6 +11,7 @@ namespace PetsLife_Adoptions.Domain.Entities
         public string Imagen { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
+        public string Historia { get; set; }
         public double Peso { get; set; }
         public List<AdoptanteMascota> AdoptanteMascota { get; set; }
         public Animal Animales { get; set; }

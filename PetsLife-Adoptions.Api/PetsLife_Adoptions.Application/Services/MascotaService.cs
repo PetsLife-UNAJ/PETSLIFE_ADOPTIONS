@@ -10,19 +10,25 @@ using System.Threading.Tasks;
 using AccessData.Validations;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using AccessData.Queries.Repository;
 
 namespace Application.Services
 {
     public interface IMascotaService
     {
         Mascota CreateMascota(MascotaDto mascota);
+        List<MascotaDto> GetMascotas();
+        MascotaDto GetMascota(int id);
+        void DeleteMascota(int id);
     }
     public class MascotaService : IMascotaService
     {
         private readonly IGenericRepository _repository;
-        public MascotaService(IGenericRepository repositry)
+        private readonly IMascotaQuery _query;
+        public MascotaService(IGenericRepository repositry , IMascotaQuery query)
         {
             this._repository = repositry;
+            this._query = query;
         }
 
         public Mascota CreateMascota(MascotaDto mascota)
@@ -37,17 +43,30 @@ namespace Application.Services
                 Peso = mascota.Peso,
                 AnimalId = mascota.AnimalId,
                 Edad = mascota.Edad,
-                Imagen = mascota.Imagen
+                Imagen = mascota.Imagen,
+                Historia = mascota.Historia
             };
 
             _repository.Add<Mascota>(Entity);
             return Entity;
-
-           
-           
-            
-
-          
+        
         }
+
+        public void DeleteMascota(int id)
+        {
+            _repository.Delete<Mascota>(id);
+        }
+
+        public MascotaDto GetMascota(int id)
+        {
+            return _query.GetMascotaById(id);
+        }
+
+        public List<MascotaDto> GetMascotas()
+        {
+            return _query.GetAllMascotas();
+        } 
+
+        
     }
 }

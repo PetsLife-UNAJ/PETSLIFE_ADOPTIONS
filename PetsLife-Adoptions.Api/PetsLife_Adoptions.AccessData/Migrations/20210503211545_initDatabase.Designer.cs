@@ -9,7 +9,7 @@ using PetsLife_Adoptions.AccessData;
 namespace AccessData.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210430222712_initDatabase")]
+    [Migration("20210503211545_initDatabase")]
     partial class initDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,6 +62,9 @@ namespace AccessData.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Adoptado")
+                        .HasColumnType("bit");
 
                     b.Property<int>("AdoptanteId")
                         .HasColumnType("int");
@@ -165,6 +168,10 @@ namespace AccessData.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
+                    b.Property<string>("Historia")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Imagen")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -178,8 +185,7 @@ namespace AccessData.Migrations
 
                     b.HasKey("MascotaId");
 
-                    b.HasIndex("AnimalId")
-                        .IsUnique();
+                    b.HasIndex("AnimalId");
 
                     b.ToTable("Mascotas");
                 });
@@ -206,8 +212,8 @@ namespace AccessData.Migrations
             modelBuilder.Entity("PetsLife_Adoptions.Domain.Entities.Mascota", b =>
                 {
                     b.HasOne("PetsLife_Adoptions.Domain.Entities.Animal", "Animales")
-                        .WithOne("Mascotas")
-                        .HasForeignKey("PetsLife_Adoptions.Domain.Entities.Mascota", "AnimalId")
+                        .WithMany("Mascotas")
+                        .HasForeignKey("AnimalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

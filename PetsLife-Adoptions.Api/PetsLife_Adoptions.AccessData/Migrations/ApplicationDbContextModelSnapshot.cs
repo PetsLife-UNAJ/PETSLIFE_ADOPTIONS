@@ -8,7 +8,7 @@ using PetsLife_Adoptions.AccessData;
 namespace AccessData.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class AdoptionDbContextModelSnapshot : ModelSnapshot
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -60,6 +60,9 @@ namespace AccessData.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Adoptado")
+                        .HasColumnType("bit");
 
                     b.Property<int>("AdoptanteId")
                         .HasColumnType("int");
@@ -162,6 +165,10 @@ namespace AccessData.Migrations
 
                     b.Property<int>("Edad")
                         .HasColumnType("int");
+
+                    b.Property<string>("Historia")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Imagen")
                         .IsRequired()

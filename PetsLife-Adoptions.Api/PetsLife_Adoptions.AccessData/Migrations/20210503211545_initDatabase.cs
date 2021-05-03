@@ -47,6 +47,7 @@ namespace AccessData.Migrations
                     Imagen = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Edad = table.Column<int>(type: "int", nullable: false),
+                    Historia = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Peso = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
@@ -67,6 +68,7 @@ namespace AccessData.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MascotaID = table.Column<int>(type: "int", nullable: false),
+                    Adoptado = table.Column<bool>(type: "bit", nullable: false),
                     AdoptanteId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -117,8 +119,7 @@ namespace AccessData.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Mascotas_AnimalId",
                 table: "Mascotas",
-                column: "AnimalId",
-                unique: true);
+                column: "AnimalId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

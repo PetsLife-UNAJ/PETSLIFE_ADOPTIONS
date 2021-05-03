@@ -25,14 +25,14 @@ namespace AccessData.Commad
             _context.SaveChanges();
         }
 
-        public void Update<T>(T entity) 
+        public void Update<T>(T entity) where T : class
         {
             _context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _context.SaveChanges();
         }
-        public void Delete (int _id) 
+        public void Delete<T> (int _id) where T : class
         {
-            _context.Remove(_id);
+            _context.Remove(_context.Find<T>(_id));
             _context.SaveChanges();
         }
 

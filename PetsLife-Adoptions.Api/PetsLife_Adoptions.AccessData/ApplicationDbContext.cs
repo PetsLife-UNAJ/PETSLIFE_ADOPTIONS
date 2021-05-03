@@ -20,10 +20,7 @@ namespace PetsLife_Adoptions.AccessData
         public DbSet<Animal> Animales { get; set; }
         public DbSet<AdoptanteMascota> AdoptanteMascotas { get; set; }
 
-        internal void Add<T>(T entity) where T : class
-        {
-            throw new NotImplementedException();
-        }
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder ) 
         {
