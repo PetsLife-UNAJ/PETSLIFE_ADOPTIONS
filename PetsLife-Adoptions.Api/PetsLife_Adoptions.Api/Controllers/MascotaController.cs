@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Http;
 namespace PetsLife_Adoptions.Api.Controllers
 {
     [ApiController]
-    [Route("Mascota")]
+    [Route("api/Mascota")]
     
     public class MascotaController : ControllerBase
     {
