@@ -7,6 +7,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccessData.Validations;
+using FluentValidation.Results;
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Services
 {
@@ -24,6 +28,10 @@ namespace Application.Services
 
         public Mascota CreateMascota(MascotaDto mascota)
         {
+            var validator = new MascotaValidator();
+           
+            validator.ValidateAndThrow(mascota);
+
             var Entity = new Mascota
             {
                 Nombre = mascota.Nombre,
@@ -35,6 +43,12 @@ namespace Application.Services
 
             _repository.Add<Mascota>(Entity);
             return Entity;
+
+           
+           
+            
+
+          
         }
     }
 }

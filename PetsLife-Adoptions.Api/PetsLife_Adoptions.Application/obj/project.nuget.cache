@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Fi2lcExanhos13nKsGbrSr3zQzSJ0UVkvrT/nrYuqlN8jj/EFN+oecv4Dg3Re83Qf1l80FcANnW4lECThatd5Q==",
+  "dgSpecHash": "j/3KgZhktvXxZ6SqEz+K0K9csMm/8dR4IGnAmZrQwxH/3wImURT+p8A3eqHgx5gGF64PIdyDrngDpW+pLtHARw==",
   "success": true,
   "projectFilePath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\German\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
+    "C:\\Users\\German\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.1.0\\fluentvalidation.aspnetcore.10.1.0.nupkg.sha512",
+    "C:\\Users\\German\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.1.0\\fluentvalidation.dependencyinjectionextensions.10.1.0.nupkg.sha512",
     "C:\\Users\\German\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\German\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\German\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

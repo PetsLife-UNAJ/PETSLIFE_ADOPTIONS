@@ -24,7 +24,16 @@ namespace PetsLife_Adoptions.Api.Controllers
         
         public IActionResult post(MascotaDto mascotaDto)
         {
-            return new JsonResult(_service.CreateMascota(mascotaDto)) {StatusCode = 201 };
+            try
+            {
+                return new JsonResult(_service.CreateMascota(mascotaDto)) { StatusCode = 201 };
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+            
         }
         
     }
