@@ -7,7 +7,7 @@ using PetsLife_Adoptions.AccessData;
 
 namespace AccessData.Migrations
 {
-    [DbContext(typeof(AdoptionDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class AdoptionDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -8,7 +8,7 @@ using PetsLife_Adoptions.AccessData;
 
 namespace AccessData.Migrations
 {
-    [DbContext(typeof(AdoptionDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20210430222712_initDatabase")]
     partial class initDatabase
     {

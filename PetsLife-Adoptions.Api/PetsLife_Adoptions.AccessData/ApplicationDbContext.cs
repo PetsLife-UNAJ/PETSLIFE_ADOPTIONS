@@ -7,9 +7,9 @@ using System.Text;
 
 namespace PetsLife_Adoptions.AccessData
 {
-    public class AdoptionDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public AdoptionDbContext(DbContextOptions<AdoptionDbContext> options
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             ) : base(options)
         {
 

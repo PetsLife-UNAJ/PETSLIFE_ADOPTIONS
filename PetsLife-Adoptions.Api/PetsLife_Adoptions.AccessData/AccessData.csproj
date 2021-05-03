@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Queries\Repository\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -34,7 +34,7 @@ namespace PetsLife_Adoptions.Api
         {
             services.AddControllers();
             var connectionString = Configuration.GetSection("connectionString").Value;
-            services.AddDbContext<AdoptionDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
             services.AddSwaggerGen(c =>
             {

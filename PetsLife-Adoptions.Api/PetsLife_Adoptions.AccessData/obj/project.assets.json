@@ -5907,25 +5907,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\German\\.nuget\\packages\\": {},
+    "C:\\Users\\Carlos\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
       "projectName": "AccessData",
-      "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
-      "packagesPath": "C:\\Users\\German\\.nuget\\packages\\",
-      "outputPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\obj\\",
+      "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
+      "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\German\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -5941,8 +5941,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
-              "projectPath": "G:\\Universidad\\Proyecto Software\\Proyecto\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
+            "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
             }
           }
         }
