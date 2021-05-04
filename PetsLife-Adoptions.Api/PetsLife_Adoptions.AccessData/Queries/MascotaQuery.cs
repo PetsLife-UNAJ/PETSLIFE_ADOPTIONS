@@ -1,5 +1,6 @@
 ﻿using AccessData.Queries.Repository;
 using Domain.DTO_s;
+using PetsLife_Adoptions.Domain.Entities;
 using SqlKata.Compilers;
 using SqlKata.Execution;
 using System;
@@ -27,30 +28,30 @@ namespace AccessData.Queries
         public List<MascotaDto> GetAllMascotas()
         {
             var db = new QueryFactory(connection, SqlKata);
-            var query = db.Query("Mascotas");
+            var mascota = db.Query("Mascotas")
+                .Join("Animales", "Animales.TipoAnimalId", "Mascotas.AnimalId")
+                .Select("Nombre", "Edad", "Peso", "Imagen", "Historia", "AnimalId AS TipoAnimalId", "Animales.TipoAnimal");
+                
 
-            var result = query.Get<MascotaDto>();
+            var result = mascota.Get<MascotaDto>();
 
             return result.ToList();
+
+           
         }
 
         public MascotaDto GetMascotaById(int id)
         {
             var db = new QueryFactory(connection, SqlKata);
-            var query = db.Query("Mascotas").Where("MascotaId", id).First();
-
-            var mascota = new MascotaDto
-            {
-                Nombre = query.Nombre,
-                Peso = query.Peso,
-                Imagen = query.Imagen,
-                Historia = query.Historia,
-                AnimalId = query.AnimalId,
-                Edad = query.Edad
-            };
+            var query = db.Query("Mascotas")
+                .Join("Animales" , "Animales.TipoAnimalId" , "Mascotas.AnimalId")
+                .Select("Nombre", "Edad", "Peso", "Imagen", "Historia", "AnimalId AS TipoAnimalId", "Animales.TipoAnimal")
+                .Where("Mascotas.MascotaId", "=", id)
+                .FirstOrDefault<MascotaDto>();
+            
 
 
-            return mascota;
+            return query;
         }
     }
 }

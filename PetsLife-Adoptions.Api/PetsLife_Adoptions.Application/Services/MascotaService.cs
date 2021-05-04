@@ -41,7 +41,7 @@ namespace Application.Services
             {
                 Nombre = mascota.Nombre,
                 Peso = mascota.Peso,
-                AnimalId = mascota.AnimalId,
+                AnimalId = mascota.TipoAnimalId,
                 Edad = mascota.Edad,
                 Imagen = mascota.Imagen,
                 Historia = mascota.Historia
