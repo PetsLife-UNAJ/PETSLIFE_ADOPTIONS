@@ -49,8 +49,6 @@ namespace AccessData.Queries
                 .Where("Mascotas.MascotaId", "=", id)
                 .FirstOrDefault<MascotaDto>();
             
-
-
             return query;
         }
     }

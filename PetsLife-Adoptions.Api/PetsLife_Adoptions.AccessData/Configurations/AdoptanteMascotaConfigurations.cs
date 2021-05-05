@@ -22,9 +22,7 @@ namespace PetsLife_Adoptions.AccessData.Configurations
                 .HasOne<Mascota>(s => s.Mascotas)
                 .WithMany(g => g.AdoptanteMascota)
                 .HasForeignKey(s => s.MascotaID);
-            modelBuilder
-                .Property(s => s.Adoptado)
-                .IsRequired();
+            
         }
     }
 }

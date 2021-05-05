@@ -44,7 +44,8 @@ namespace Application.Services
                 AnimalId = mascota.TipoAnimalId,
                 Edad = mascota.Edad,
                 Imagen = mascota.Imagen,
-                Historia = mascota.Historia
+                Historia = mascota.Historia,
+                Adoptado = mascota.Adoptado
             };
 
             _repository.Add<Mascota>(Entity);

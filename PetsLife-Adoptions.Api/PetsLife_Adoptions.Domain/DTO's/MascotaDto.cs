@@ -10,7 +10,7 @@ namespace Domain.DTO_s
     {
         public string TipoAnimal { get; set; }
         public int TipoAnimalId { get; set; }
-       
+        public bool Adoptado { get; set; }
         public string Imagen { get; set; }
         public string Nombre { get; set; }
         public string Historia { get; set; }

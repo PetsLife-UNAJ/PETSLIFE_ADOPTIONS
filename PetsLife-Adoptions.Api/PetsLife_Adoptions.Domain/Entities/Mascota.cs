@@ -9,6 +9,7 @@ namespace PetsLife_Adoptions.Domain.Entities
         public int MascotaId { get; set; }
         public int AnimalId { get; set; }
         public string Imagen { get; set; }
+        public bool Adoptado { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public string Historia { get; set; }

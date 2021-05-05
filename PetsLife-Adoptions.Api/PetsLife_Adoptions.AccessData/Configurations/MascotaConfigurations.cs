@@ -33,6 +33,9 @@ namespace PetsLife_Adoptions.AccessData.Configurations
             modelBuilder
                 .Property(s => s.Historia)
                 .IsRequired();
+            modelBuilder
+                .Property(s => s.Adoptado)
+                .IsRequired();
         }
     }
 }
