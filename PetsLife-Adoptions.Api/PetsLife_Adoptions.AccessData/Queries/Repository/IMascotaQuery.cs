@@ -9,8 +9,12 @@ namespace AccessData.Queries.Repository
 {
     public interface IMascotaQuery
     {
-        List<MascotaDto> GetAllMascotas();
+        List<ResponseMascotaDto> GetAllMascotas();
         MascotaDto GetMascotaById(int id);
-        
+        List<MascotaDto> GetAllMascotasByTipoAnimales(int id);
+        List<MascotaDto> GetAllAdoptados();
+        List<MascotaDto> GetAllAdoptables();
+
+
     }
 }

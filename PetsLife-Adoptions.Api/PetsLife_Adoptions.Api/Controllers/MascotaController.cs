@@ -35,7 +35,7 @@ namespace PetsLife_Adoptions.Api.Controllers
 
         }
 
-        [HttpGet("All")]
+        [HttpGet("/All")]
         public IActionResult GetAll()
         {
             try
@@ -62,6 +62,62 @@ namespace PetsLife_Adoptions.Api.Controllers
                 return BadRequest("No se encuentra en la base de datos");
             }
 
+
+        }
+        [HttpGet("/TipoAnimal/{id}")]
+        public ActionResult GetAllTipoAnimal(int id)
+        {
+            try
+            {
+                return new JsonResult(_service.GetMascotasPorTipoAnimal(id)) { StatusCode = 200 };
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("No se encuentra en la base de datos");
+            }
+
+        }
+        [HttpGet("/Adoptados")]
+        public IActionResult GetAdoptados()
+        {
+            try
+            {
+                return new JsonResult(_service.GetAdoptados()) { StatusCode = 200 };
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("No se encuentra en la base de datos");
+            }
+
+        }
+        [HttpGet("/Adoptables")]
+        public IActionResult GetAdoptables()
+        {
+            try
+            {
+                return new JsonResult(_service.GetAdoptables()) { StatusCode = 200 };
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("No se encuentra en la base de datos");
+            }
+
+        }
+        [HttpPut("{id}")]
+        public IActionResult UpdateMascota([FromRoute]int id ,MascotaDto mascota)
+        {
+            try
+            {
+                return new JsonResult(_service.UpdateMascota(id ,mascota)) { StatusCode = 200 };
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("No se encuentra en la base de datos");
+            }
 
         }
         [HttpDelete("{id}")]
