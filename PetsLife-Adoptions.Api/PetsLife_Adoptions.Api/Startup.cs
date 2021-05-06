@@ -59,6 +59,9 @@ namespace PetsLife_Adoptions.Api
             services.AddTransient<IGenericRepository, GenericRepository>();
             services.AddTransient<IMascotaService , MascotaService>();
             services.AddTransient<IMascotaQuery, MascotaQuery>();
+
+            services.AddTransient<IAdoptanteService, AdoptanteService>();
+            services.AddTransient<IAdoptanteQuery, AdoptanteQuery>(); 
            
             //Configuracion SqlKata
             services.AddTransient<Compiler, SqlServerCompiler>();
