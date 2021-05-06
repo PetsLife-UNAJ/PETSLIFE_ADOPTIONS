@@ -16,8 +16,8 @@ namespace Application.Services
     public interface IAdoptanteService 
     {
         Adoptante CreateAdoptante(AdoptanteDto adoptante);
-        List<AdoptanteDto> GetAdoptantes();
-        AdoptanteDto GetAdoptante(int id);
+        /*List<AdoptanteDto> GetAdoptantes();
+        AdoptanteDto GetAdoptante(int id);*/
         void DeleteAdoptante(int id);
     }
     public class AdoptanteService : IAdoptanteService
@@ -51,7 +51,7 @@ namespace Application.Services
             _repository.Delete<Adoptante>(id);
         }
 
-        public AdoptanteDto GetAdoptante(int id)
+        /*public AdoptanteDto GetAdoptante(int id)
         {
             return _query.GetAdoptanteById(id);
         }
@@ -59,6 +59,6 @@ namespace Application.Services
         public List<AdoptanteDto> GetAdoptantes()
         {
             return _query.GetAllAdoptantes();
-        }
+        }*/
     }
 }

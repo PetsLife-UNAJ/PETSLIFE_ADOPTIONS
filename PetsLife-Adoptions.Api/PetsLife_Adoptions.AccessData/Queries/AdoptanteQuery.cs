@@ -25,10 +25,10 @@ namespace AccessData.Queries
         public AdoptanteDto GetAdoptanteById(int id)
         {
             var db = new QueryFactory(connection, SqlKata);
-            var query = db.Query("Adoptante")
-                .Join("Adoptante","Adoptante.AdoptanteId","Adoptante.MascotaId")
-                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email", "AdoptanteId")
-                .Where("Adoptante.AdoptanteId","=",id)
+            var query = db.Query("Adoptantes")
+                .Join("AdoptanteMascota","Adoptantes.AdoptanteId","Adoptantes.AdoptanteId")
+                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email")
+                .Where("Adoptantes.AdoptanteId","=",id)
                 .FirstOrDefault<AdoptanteDto>();
             return query;
         }
