@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace AccessData.Queries.Repository
 {
-    interface IAdoptanteMascotaQuery
+    public interface IAdoptanteMascotaQuery
     {
-        List<AdoptanteMascotaDto> GetAdoptanteMascotas();
-        //AdoptanteMascotaDto GetAdoptanteMascota();
-        AdoptanteDto GetAdoptante(int id);
-        MascotaDto GetMascota(int id);
+        List<AdoptanteDto> GetAdoptantesAll();
+        List<AdoptanteDto> GetPosibleAdoptantes();
+        List<AdoptanteDto> GetAdopcionesAprobadas();
     }
 }

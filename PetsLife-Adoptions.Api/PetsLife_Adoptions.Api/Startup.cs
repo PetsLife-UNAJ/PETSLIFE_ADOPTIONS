@@ -55,13 +55,19 @@ namespace PetsLife_Adoptions.Api
                 options.AddPolicy("AnyAllow", policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
-            //Ijecciones de dependencias
+            //Injecciones de dependencias
             services.AddTransient<IGenericRepository, GenericRepository>();
             services.AddTransient<IMascotaService , MascotaService>();
             services.AddTransient<IMascotaQuery, MascotaQuery>();
 
+            services.AddTransient<IAdoptanteMascotaQuery, AdoptanteMascotaQuery>();
+            services.AddTransient<IAdoptanteMascotaService, AdoptanteMascotaService>();
+
             services.AddTransient<IAdoptanteService, AdoptanteService>();
-            services.AddTransient<IAdoptanteQuery, AdoptanteQuery>(); 
+            services.AddTransient<IAdoptanteQuery, AdoptanteQuery>();
+
+            
+
            
             //Configuracion SqlKata
             services.AddTransient<Compiler, SqlServerCompiler>();

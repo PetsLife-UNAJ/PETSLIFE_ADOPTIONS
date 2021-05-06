@@ -14,5 +14,7 @@ namespace Domain.DTO_s
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
+        public int MascotaId { get; set; }
+        public int AdoptanteId { get; set; }
     }
 }

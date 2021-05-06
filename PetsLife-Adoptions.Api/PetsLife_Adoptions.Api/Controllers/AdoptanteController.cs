@@ -20,48 +20,18 @@ namespace PetsLife_Adoptions.Api.Controllers
         {
             this._service = service;
         }
-        [HttpPost]
-        public IActionResult Post(AdoptanteDto adoptanteDto)
+        [HttpPost("{id}")]
+        public IActionResult Post([FromRoute] int id,AdoptanteDto adoptanteDto)
         {
             try
             {
-                return new JsonResult(_service.CreateAdoptante(adoptanteDto)) { StatusCode = 201 };
+                return new JsonResult(_service.CreateAdoptante(id,adoptanteDto)) { StatusCode = 201 };
             }
             catch (Exception e)
             {
 
                 return BadRequest(e.Message);
             }
-
-        }
-
-        [HttpGet("All")]
-        public IActionResult GetAll()
-        {
-            try
-            {
-                return new JsonResult(_service.GetAdoptantes()) { StatusCode = 200 };
-            }
-            catch (Exception e)
-            {
-
-                return BadRequest(e.Message);
-            }
-
-        }
-        [HttpGet("{id}")]
-        public ActionResult GetById(int id)
-        {
-            try
-            {
-                return new JsonResult(_service.GetAdoptante(id)) { StatusCode = 200 };
-            }
-            catch (Exception )
-            {
-
-                return BadRequest("No se encuentra en la base de datos");
-            }
-
 
         }
         [HttpDelete("{id}")]

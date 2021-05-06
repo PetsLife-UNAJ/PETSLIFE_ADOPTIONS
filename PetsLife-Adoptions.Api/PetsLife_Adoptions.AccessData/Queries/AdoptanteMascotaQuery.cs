@@ -14,43 +14,50 @@ namespace AccessData.Queries
 {
     public class AdoptanteMascotaQuery : IAdoptanteMascotaQuery
     {
-        private readonly IDbConnection connection;
-        private readonly Compiler SqlKata;
+        private readonly IDbConnection _connection;
+        private readonly Compiler _SqlKata;
         public AdoptanteMascotaQuery(IDbConnection connection, Compiler sqlKata) 
         {
-            this.connection = connection;
-            this.SqlKata = sqlKata;
+            this._connection = connection;
+            this._SqlKata = sqlKata;
         }
 
-        public AdoptanteDto GetAdoptante(int id)
+        public List<AdoptanteDto> GetAdopcionesAprobadas()
         {
-            var db = new QueryFactory(connection, SqlKata);
-            var query = db.Query("AdoptanteMascotas")
-                .Join("Adoptantes", "Adoptantes.AdoptanteId", "AdoptanteMascotas.AdoptanteId")
-                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email")
-                .Where("Adoptantes.AdoptanteId", "=", id)
-                .FirstOrDefault<AdoptanteDto>();
-            return query;
-        }
-        public MascotaDto GetMascota(int id)
-        {
-            var db = new QueryFactory(connection, SqlKata);
-            var query = db.Query("Mascotas")
-                .Join("Animales", "Animales.TipoAnimalId", "Mascotas.AnimalId")
-                .Select("Nombre", "Edad", "Peso", "Imagen", "Historia", "AnimalId AS TipoAnimalId", "Animales.TipoAnimal")
-                .Where("Mascotas.MascotaId", "=", id)
-                .FirstOrDefault<MascotaDto>();
+            {
+                var db = new QueryFactory(_connection, _SqlKata);
+                var adoptante = db.Query("AdoptanteMascotas")
+                    .Join("Adoptantes", "Adoptantes.AdoptanteId", "AdoptanteMascotas.AdoptanteId")
+                    .Join("Mascotas", "Mascotas.MascotaId", "AdoptanteMascotas.MascotaId")
+                    .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.MascotaId", "Adoptantes.AdoptanteId")
+                    .Where("Mascotas.Adoptado", "=", true);
+                var result = adoptante.Get<AdoptanteDto>();
 
-            return query;
+                return result.ToList();
+            }
         }
 
-        public List<AdoptanteMascotaDto> GetAdoptanteMascotas()
+        public List<AdoptanteDto> GetAdoptantesAll()
         {
-            var db = new QueryFactory(connection, SqlKata);
+            var db = new QueryFactory(_connection, _SqlKata);
             var adoptante = db.Query("AdoptanteMascotas")
                 .Join("Adoptantes", "Adoptantes.AdoptanteId", "AdoptanteMascotas.AdoptanteId")
-                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email");
-            var result = adoptante.Get<AdoptanteMascotaDto>();
+                .Join("Mascotas", "Mascotas.MascotaId", "AdoptanteMascotas.MascotaId")
+                .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.MascotaId","Adoptantes.AdoptanteId");
+            var result = adoptante.Get<AdoptanteDto>();
+
+            return result.ToList();
+        }
+
+        public List<AdoptanteDto> GetPosibleAdoptantes()
+        {
+            var db = new QueryFactory(_connection, _SqlKata);
+            var adoptante = db.Query("AdoptanteMascotas")
+                .Join("Adoptantes", "Adoptantes.AdoptanteId", "AdoptanteMascotas.AdoptanteId")
+                .Join("Mascotas", "Mascotas.MascotaId", "AdoptanteMascotas.MascotaId")
+                .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.MascotaId", "Adoptantes.AdoptanteId")
+                .Where("Mascotas.Adoptado", "=", false);
+            var result = adoptante.Get<AdoptanteDto>();
 
             return result.ToList();
         }

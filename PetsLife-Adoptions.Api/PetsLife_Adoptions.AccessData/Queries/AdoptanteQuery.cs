@@ -27,7 +27,7 @@ namespace AccessData.Queries
             var db = new QueryFactory(connection, SqlKata);
             var query = db.Query("Adoptantes")
                 .Join("AdoptanteMascota","Adoptantes.AdoptanteId","Adoptantes.AdoptanteId")
-                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email")
+                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email","AdoptanteId")
                 .Where("Adoptantes.AdoptanteId","=",id)
                 .FirstOrDefault<AdoptanteDto>();
             return query;
@@ -38,10 +38,22 @@ namespace AccessData.Queries
             var db = new QueryFactory(connection, SqlKata);
             var adoptante = db.Query("Adoptantes")
                 .Join("Adoptantes", "Adoptantes.AdoptanteId", "Adoptantes.AdoptanteId")
-                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email");
+                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email", "AdoptanteId");
             var result = adoptante.Get<AdoptanteDto>();
 
             return result.ToList();
+        }
+
+        public Mascota GetMascotaById(int id)
+        {
+            var db = new QueryFactory(connection, SqlKata);
+            var query = db.Query("Mascotas")
+                .Join("Animales", "Animales.TipoAnimalId", "Mascotas.AnimalId")
+                .Select("Nombre", "Edad", "Peso", "Imagen", "Historia", "AnimalId AS TipoAnimalId", "Animales.TipoAnimal","MascotaId")
+                .Where("Mascotas.MascotaId", "=", id)
+                .First<Mascota>();
+
+            return query;
         }
     }
 }

@@ -15,10 +15,9 @@ namespace Application.Services
 {
     public interface IAdoptanteService 
     {
-        Adoptante CreateAdoptante(AdoptanteDto adoptante);
-        /*List<AdoptanteDto> GetAdoptantes();
-        AdoptanteDto GetAdoptante(int id);*/
+        AdoptanteDto CreateAdoptante(int id,AdoptanteDto adoptante);
         void DeleteAdoptante(int id);
+        void ConfirmAdoption(Adoptante adoptante, Mascota mascota);
     }
     public class AdoptanteService : IAdoptanteService
     {
@@ -29,7 +28,7 @@ namespace Application.Services
             this._repository = repository;
             this._query = query;
         }
-        public Adoptante CreateAdoptante(AdoptanteDto adoptante)
+        public AdoptanteDto CreateAdoptante(int id,AdoptanteDto adoptante)
         {
             var validator = new AdoptanteValidator();
             validator.ValidateAndThrow(adoptante);
@@ -42,8 +41,24 @@ namespace Application.Services
                 Telefono = adoptante.Telefono,
                 Email = adoptante.Email,
             };
+
             _repository.Add<Adoptante>(Entity);
-            return Entity;
+            var Mascota = _query.GetMascotaById(id);
+            ConfirmAdoption(Entity,Mascota);
+
+            var dto = new AdoptanteDto
+            {
+                Nombre = Entity.Nombre,
+                Apellido = Entity.Apellido,
+                Dni = Entity.Dni,
+                Direccion = Entity.Direccion,
+                Telefono = Entity.Telefono,
+                Email = Entity.Email,
+                MascotaId = Mascota.MascotaId,
+                AdoptanteId = Entity.AdoptanteId
+            };
+            
+            return dto;
         }
 
         public void DeleteAdoptante(int id)
@@ -51,14 +66,20 @@ namespace Application.Services
             _repository.Delete<Adoptante>(id);
         }
 
-        /*public AdoptanteDto GetAdoptante(int id)
+        public void ConfirmAdoption(Adoptante adoptante, Mascota mascota)
         {
-            return _query.GetAdoptanteById(id);
+            var Entity = new AdoptanteMascota
+            {
+                AdoptanteId = adoptante.AdoptanteId,
+                MascotaID = mascota.MascotaId
+            };
+            _repository.Add<AdoptanteMascota>(Entity);
+            var dto = new AdoptanteMascotaDto
+            {
+                AdoptanteId = Entity.AdoptanteId,
+                MascotaId = Entity.MascotaID
+            };
+            
         }
-
-        public List<AdoptanteDto> GetAdoptantes()
-        {
-            return _query.GetAllAdoptantes();
-        }*/
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Domain.DTO_s;
+using PetsLife_Adoptions.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace AccessData.Queries.Repository
     {
         List<AdoptanteDto> GetAllAdoptantes();
         AdoptanteDto GetAdoptanteById(int id);
+        Mascota GetMascotaById(int id);
     }
 }
