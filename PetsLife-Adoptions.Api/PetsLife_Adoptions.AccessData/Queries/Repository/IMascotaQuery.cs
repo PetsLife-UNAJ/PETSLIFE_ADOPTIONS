@@ -14,6 +14,7 @@ namespace AccessData.Queries.Repository
         List<MascotaDto> GetAllMascotasByTipoAnimales(int id);
         List<MascotaDto> GetAllAdoptados();
         List<MascotaDto> GetAllAdoptables();
+       
 
 
     }

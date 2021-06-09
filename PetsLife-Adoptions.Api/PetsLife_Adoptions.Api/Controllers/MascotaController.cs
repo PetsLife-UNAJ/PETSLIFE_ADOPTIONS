@@ -27,15 +27,16 @@ namespace PetsLife_Adoptions.Api.Controllers
             {
                 return new JsonResult(_service.CreateMascota(mascotaDto)) { StatusCode = 201 };
             }
-            catch (Exception e)
+            catch (Exception )
             {
 
-                return BadRequest(e.Message);
+                return BadRequest(new { error = "no se pudo crear"});
             }
 
         }
+        
 
-        [HttpGet("/All")]
+        [HttpGet("/Mascotas/All")]
         public IActionResult GetAll()
         {
             try

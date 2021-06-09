@@ -23,6 +23,7 @@ namespace Application.Services
         List<MascotaDto> GetAdoptados();
         List<MascotaDto> GetAdoptables();
         ResponseMascotaDto UpdateMascota(int id ,MascotaDto mascota);
+        
         void DeleteMascota(int id);
     }
     public class MascotaService : IMascotaService
@@ -102,6 +103,8 @@ namespace Application.Services
             return _query.GetAllMascotasByTipoAnimales(id);
 
         }
+
+       
 
         public ResponseMascotaDto UpdateMascota(int id , MascotaDto mascota)
         {

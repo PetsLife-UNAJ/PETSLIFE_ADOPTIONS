@@ -59,12 +59,15 @@ namespace PetsLife_Adoptions.Api
             services.AddTransient<IGenericRepository, GenericRepository>();
             services.AddTransient<IMascotaService , MascotaService>();
             services.AddTransient<IMascotaQuery, MascotaQuery>();
-
+           
             services.AddTransient<IAdoptanteMascotaQuery, AdoptanteMascotaQuery>();
             services.AddTransient<IAdoptanteMascotaService, AdoptanteMascotaService>();
 
             services.AddTransient<IAdoptanteService, AdoptanteService>();
             services.AddTransient<IAdoptanteQuery, AdoptanteQuery>();
+
+            services.AddTransient<ITipoMascotaService, TipoMascotaService>();
+            services.AddTransient<ITipoMascotaQuery, TipoMascotaQuery>();
 
             
 
