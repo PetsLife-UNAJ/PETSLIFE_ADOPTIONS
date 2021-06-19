@@ -38,6 +38,7 @@ namespace Application.Services
 
         public ResponseMascotaDto CreateMascota(MascotaDto mascota)
         {
+            
             var validator = new MascotaValidator();
 
             validator.ValidateAndThrow(mascota);
