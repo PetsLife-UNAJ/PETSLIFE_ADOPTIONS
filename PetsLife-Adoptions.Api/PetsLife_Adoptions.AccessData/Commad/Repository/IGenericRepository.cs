@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PetsLife_Adoptions.Domain.Entities;
-
-namespace AccessData.Commad.Repository
+﻿namespace AccessData.Commad.Repository
 {
     public interface IGenericRepository
     {

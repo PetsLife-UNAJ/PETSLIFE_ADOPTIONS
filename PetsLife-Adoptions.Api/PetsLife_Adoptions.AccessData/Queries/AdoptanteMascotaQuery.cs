@@ -1,14 +1,10 @@
 ﻿using AccessData.Queries.Repository;
 using Domain.DTO_s;
-using PetsLife_Adoptions.Domain.Entities;
 using SqlKata.Compilers;
 using SqlKata.Execution;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccessData.Queries
 {
@@ -16,7 +12,7 @@ namespace AccessData.Queries
     {
         private readonly IDbConnection _connection;
         private readonly Compiler _SqlKata;
-        public AdoptanteMascotaQuery(IDbConnection connection, Compiler sqlKata) 
+        public AdoptanteMascotaQuery(IDbConnection connection, Compiler sqlKata)
         {
             this._connection = connection;
             this._SqlKata = sqlKata;
@@ -43,7 +39,7 @@ namespace AccessData.Queries
             var adoptante = db.Query("AdoptanteMascotas")
                 .Join("Adoptantes", "Adoptantes.AdoptanteId", "AdoptanteMascotas.AdoptanteId")
                 .Join("Mascotas", "Mascotas.MascotaId", "AdoptanteMascotas.MascotaId")
-                .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.MascotaId","Adoptantes.AdoptanteId");
+                .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.MascotaId", "Adoptantes.AdoptanteId");
             var result = adoptante.Get<AdoptanteDto>();
 
             return result.ToList();

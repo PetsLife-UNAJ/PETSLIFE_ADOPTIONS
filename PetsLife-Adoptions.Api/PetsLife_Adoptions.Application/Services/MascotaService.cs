@@ -1,16 +1,10 @@
 ﻿using AccessData.Commad.Repository;
-
-using Domain.DTO_s;
-using PetsLife_Adoptions.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AccessData.Validations;
-using FluentValidation;
-using Microsoft.AspNetCore.Mvc;
 using AccessData.Queries.Repository;
+using AccessData.Validations;
+using Domain.DTO_s;
+using FluentValidation;
+using PetsLife_Adoptions.Domain.Entities;
+using System.Collections.Generic;
 
 namespace Application.Services
 {
@@ -22,8 +16,8 @@ namespace Application.Services
         List<MascotaDto> GetMascotasPorTipoAnimal(int id);
         List<MascotaDto> GetAdoptados();
         List<MascotaDto> GetAdoptables();
-        ResponseMascotaDto UpdateMascota(int id ,MascotaDto mascota);
-        
+        ResponseMascotaDto UpdateMascota(int id, MascotaDto mascota);
+
         void DeleteMascota(int id);
     }
     public class MascotaService : IMascotaService
@@ -38,7 +32,7 @@ namespace Application.Services
 
         public ResponseMascotaDto CreateMascota(MascotaDto mascota)
         {
-            
+
             var validator = new MascotaValidator();
 
             validator.ValidateAndThrow(mascota);
@@ -105,9 +99,9 @@ namespace Application.Services
 
         }
 
-       
 
-        public ResponseMascotaDto UpdateMascota(int id , MascotaDto mascota)
+
+        public ResponseMascotaDto UpdateMascota(int id, MascotaDto mascota)
         {
             var validator = new MascotaValidator();
 
@@ -115,7 +109,7 @@ namespace Application.Services
 
             var Entity = new Mascota
             {
-                MascotaId = id, 
+                MascotaId = id,
                 Nombre = mascota.Nombre,
                 Peso = mascota.Peso,
                 AnimalId = mascota.TipoAnimalId,
@@ -142,7 +136,7 @@ namespace Application.Services
 
             return responseEntity;
 
-            
+
         }
     }
 }

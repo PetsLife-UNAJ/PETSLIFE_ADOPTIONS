@@ -1,27 +1,22 @@
-using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
+using AccessData.Commad;
+using AccessData.Commad.Repository;
+using AccessData.Queries;
+using AccessData.Queries.Repository;
+using Application.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using System.Data.SqlClient;
-using PetsLife_Adoptions.AccessData;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Application.Services;
-using AccessData.Commad.Repository;
-using AccessData.Commad;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PetsLife_Adoptions.AccessData;
 using SqlKata.Compilers;
+using System;
 using System.Data;
-using Microsoft.Data.SqlClient;
-using AccessData.Queries.Repository;
-using AccessData.Queries;
+using System.Text;
 using SqlConnection = Microsoft.Data.SqlClient.SqlConnection;
 
 namespace PetsLife_Adoptions.Api
@@ -40,6 +35,29 @@ namespace PetsLife_Adoptions.Api
         {
             //Configuracion Sql ConnectionString
             services.AddControllers();
+
+            //AUTH CONFIG
+            var key = Encoding.ASCII.GetBytes(Configuration.GetValue<string>("SecretKey"));
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ClockSkew = TimeSpan.FromMinutes(0)
+                };
+            });
+            //FIN AUTH CONFIG
+
             var connectionString = Configuration.GetSection("connectionString").Value;
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
@@ -57,9 +75,9 @@ namespace PetsLife_Adoptions.Api
 
             //Injecciones de dependencias
             services.AddTransient<IGenericRepository, GenericRepository>();
-            services.AddTransient<IMascotaService , MascotaService>();
+            services.AddTransient<IMascotaService, MascotaService>();
             services.AddTransient<IMascotaQuery, MascotaQuery>();
-           
+
             services.AddTransient<IAdoptanteMascotaQuery, AdoptanteMascotaQuery>();
             services.AddTransient<IAdoptanteMascotaService, AdoptanteMascotaService>();
 
@@ -69,9 +87,6 @@ namespace PetsLife_Adoptions.Api
             services.AddTransient<ITipoMascotaService, TipoMascotaService>();
             services.AddTransient<ITipoMascotaQuery, TipoMascotaQuery>();
 
-            
-
-           
             //Configuracion SqlKata
             services.AddTransient<Compiler, SqlServerCompiler>();
             services.AddTransient<IDbConnection>(b =>
@@ -95,12 +110,14 @@ namespace PetsLife_Adoptions.Api
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+            app.UseSwagger();
         }
     }
 }

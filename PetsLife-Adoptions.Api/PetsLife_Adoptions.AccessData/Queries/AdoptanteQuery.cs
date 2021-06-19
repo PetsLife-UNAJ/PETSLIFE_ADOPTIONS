@@ -3,12 +3,9 @@ using Domain.DTO_s;
 using PetsLife_Adoptions.Domain.Entities;
 using SqlKata.Compilers;
 using SqlKata.Execution;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccessData.Queries
 {
@@ -16,8 +13,8 @@ namespace AccessData.Queries
     {
         private readonly IDbConnection connection;
         private readonly Compiler SqlKata;
-        
-        public AdoptanteQuery(IDbConnection connection, Compiler sqlKata) 
+
+        public AdoptanteQuery(IDbConnection connection, Compiler sqlKata)
         {
             this.connection = connection;
             this.SqlKata = sqlKata;
@@ -26,9 +23,9 @@ namespace AccessData.Queries
         {
             var db = new QueryFactory(connection, SqlKata);
             var query = db.Query("Adoptantes")
-                .Join("AdoptanteMascota","Adoptantes.AdoptanteId","Adoptantes.AdoptanteId")
-                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email","AdoptanteId")
-                .Where("Adoptantes.AdoptanteId","=",id)
+                .Join("AdoptanteMascota", "Adoptantes.AdoptanteId", "Adoptantes.AdoptanteId")
+                .Select("Nombre", "Apellido", "Dni", "Direccion", "Telefono", "Email", "AdoptanteId")
+                .Where("Adoptantes.AdoptanteId", "=", id)
                 .FirstOrDefault<AdoptanteDto>();
             return query;
         }
@@ -49,7 +46,7 @@ namespace AccessData.Queries
             var db = new QueryFactory(connection, SqlKata);
             var query = db.Query("Mascotas")
                 .Join("Animales", "Animales.TipoAnimalId", "Mascotas.AnimalId")
-                .Select("Nombre", "Edad", "Peso", "Imagen", "Historia", "AnimalId AS TipoAnimalId", "Animales.TipoAnimal","MascotaId")
+                .Select("Nombre", "Edad", "Peso", "Imagen", "Historia", "AnimalId AS TipoAnimalId", "Animales.TipoAnimal", "MascotaId")
                 .Where("Mascotas.MascotaId", "=", id)
                 .First<Mascota>();
 

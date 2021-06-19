@@ -2,12 +2,9 @@
 using Domain.DTO_s;
 using SqlKata.Compilers;
 using SqlKata.Execution;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccessData.Queries
 {
@@ -25,7 +22,7 @@ namespace AccessData.Queries
         {
             var db = new QueryFactory(connection, SqlKata);
             var mascota = db.Query("Animales")
-                .Select("TipoAnimalId" , "TipoAnimal");
+                .Select("TipoAnimalId", "TipoAnimal");
 
 
             var result = mascota.Get<TipoMascotaDTO>();

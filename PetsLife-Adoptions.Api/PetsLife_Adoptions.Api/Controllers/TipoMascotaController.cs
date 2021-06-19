@@ -1,15 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Application.Services;
 
 namespace PetsLife_Adoptions.Api.Controllers
 {
     [ApiController]
     [Route("api/TiposMascotas")]
+    //[Authorize]
     public class TipoMascotaController : ControllerBase
     {
         private readonly ITipoMascotaService _service;
@@ -26,12 +24,8 @@ namespace PetsLife_Adoptions.Api.Controllers
             }
             catch (Exception e)
             {
-
                 return BadRequest(e.Message);
             }
-
-
         }
-
     }
 }

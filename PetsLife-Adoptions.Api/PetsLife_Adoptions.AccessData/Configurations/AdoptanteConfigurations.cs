@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PetsLife_Adoptions.Domain.Entities;
 
 namespace PetsLife_Adoptions.AccessData.Configurations
 {
     class AdoptanteConfigurations
     {
-        public AdoptanteConfigurations(EntityTypeBuilder<Adoptante> modelBuilder) 
+        public AdoptanteConfigurations(EntityTypeBuilder<Adoptante> modelBuilder)
         {
             modelBuilder
                .HasKey(s => s.AdoptanteId);

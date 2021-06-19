@@ -1,16 +1,11 @@
 ﻿using Domain.DTO_s;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccessData.Validations
 {
     public class AdoptanteValidator : AbstractValidator<AdoptanteDto>
     {
-        public AdoptanteValidator() 
+        public AdoptanteValidator()
         {
             RuleFor(x => x.Nombre).NotEmpty().NotNull().WithMessage("El campo Nombre no puede estar vacio");
             RuleFor(x => x.Apellido).NotEmpty().NotNull().WithMessage("El campo Apellido no puede estar vacio");
