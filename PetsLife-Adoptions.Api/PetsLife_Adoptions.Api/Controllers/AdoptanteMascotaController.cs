@@ -6,7 +6,7 @@ using System;
 namespace PetsLife_Adoptions.Api.Controllers
 {
     [ApiController]
-    [Route("api/AdoptanteMascota")]
+    [Route("api/[controller]")]
     //[Authorize]
     public class AdoptanteMascotaController : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace PetsLife_Adoptions.Api.Controllers
         {
             this._service = service;
         }
-        [HttpGet("/All")]
+        [HttpGet("/api/All")]
         public IActionResult GetAll()
         {
             try
@@ -28,7 +28,7 @@ namespace PetsLife_Adoptions.Api.Controllers
             }
         }
 
-        [HttpGet("/PosiblesAdoptantes")]
+        [HttpGet("/api/PosiblesAdoptantes")]
         public IActionResult GetAllPosibles()
         {
             try
@@ -40,7 +40,7 @@ namespace PetsLife_Adoptions.Api.Controllers
                 return BadRequest(e.Message);
             }
         }
-        [HttpGet("/AdopcionesFinalizadas")]
+        [HttpGet("/api/AdopcionesFinalizadas")]
         public IActionResult GetAllFinalizadas()
         {
             try

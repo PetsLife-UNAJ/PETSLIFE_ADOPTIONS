@@ -15,7 +15,7 @@ namespace PetsLife_Adoptions.Api.Controllers
         {
             this._service = service;
         }
-        [HttpGet("/Tipos")]
+        [HttpGet("/api/Tipos")]
         public IActionResult GetTipos()
         {
             try

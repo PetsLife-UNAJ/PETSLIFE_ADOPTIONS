@@ -6187,19 +6187,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nuzzo\\.nuget\\packages\\": {}
+    "C:\\Users\\daniel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nuzzo\\Desktop\\PetsLife-UNAJ\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
+      "projectUniqueName": "C:\\Users\\daniel\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
       "projectName": "AccessData",
-      "projectPath": "C:\\Users\\Nuzzo\\Desktop\\PetsLife-UNAJ\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
-      "packagesPath": "C:\\Users\\Nuzzo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nuzzo\\Desktop\\PetsLife-UNAJ\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\obj\\",
+      "projectPath": "C:\\Users\\daniel\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\AccessData.csproj",
+      "packagesPath": "C:\\Users\\daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\daniel\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.AccessData\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nuzzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6213,8 +6213,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Nuzzo\\Desktop\\PetsLife-UNAJ\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Nuzzo\\Desktop\\PetsLife-UNAJ\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
+            "C:\\Users\\daniel\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\daniel\\source\\repos\\PetsLife_Adoptions\\PetsLife-Adoptions.Api\\PetsLife_Adoptions.Domain\\Domain.csproj"
             }
           }
         }
@@ -6277,7 +6277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

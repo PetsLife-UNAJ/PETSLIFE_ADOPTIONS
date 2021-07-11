@@ -29,7 +29,7 @@ namespace PetsLife_Adoptions.Api.Controllers
             }
         }
 
-        [HttpGet("/Mascotas/All")]
+        [HttpGet("/api/Mascotas/All")]
         public IActionResult GetAll()
         {
             try
@@ -53,7 +53,7 @@ namespace PetsLife_Adoptions.Api.Controllers
                 return BadRequest("No se encuentra en la base de datos");
             }
         }
-        [HttpGet("/TipoAnimal/{id}")]
+        [HttpGet("/api/TipoAnimal/{id}")]
         public ActionResult GetAllTipoAnimal(int id)
         {
             try
@@ -65,7 +65,7 @@ namespace PetsLife_Adoptions.Api.Controllers
                 return BadRequest("No se encuentra en la base de datos");
             }
         }
-        [HttpGet("/Adoptados")]
+        [HttpGet("/api/Adoptados")]
         public IActionResult GetAdoptados()
         {
             try
@@ -77,7 +77,7 @@ namespace PetsLife_Adoptions.Api.Controllers
                 return BadRequest("No se encuentra en la base de datos");
             }
         }
-        [HttpGet("/Adoptables")]
+        [HttpGet("/api/Adoptables")]
         public IActionResult GetAdoptables()
         {
             try
