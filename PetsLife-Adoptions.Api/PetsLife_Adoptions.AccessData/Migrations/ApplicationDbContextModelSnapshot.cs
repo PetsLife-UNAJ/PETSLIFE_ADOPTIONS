@@ -196,7 +196,7 @@ namespace AccessData.Migrations
                             Edad = 1,
                             Historia = "Se darán desparacitados. Faltan 2 semanas para que desteten y pueden irse a un hogar definitivo!!",
                             Imagen = "https://scontent.faep9-2.fna.fbcdn.net/v/t1.6435-9/203992742_287174139818403_7111540916636416702_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeG2rnFxKO0kDNCUKv-aFs7uCS0ud5s0Pt0JLS53mzQ-3b7thL_wiT9vWkkQ8aeIjC4hpGD2CsTERCui-2mxq9-t&_nc_ohc=6RZ4ZwAWuwsAX8rvyoU&_nc_ht=scontent.faep9-2.fna&oh=678793d7d4479262034af3c3f4884be2&oe=60F18064",
-                            Nombre = "Morocha",
+                            Nombre = "Moro",
                             Peso = 1.0
                         },
                         new
