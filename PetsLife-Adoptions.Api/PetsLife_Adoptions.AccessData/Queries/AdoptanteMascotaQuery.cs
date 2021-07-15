@@ -51,8 +51,9 @@ namespace AccessData.Queries
             var adoptante = db.Query("AdoptanteMascotas")
                 .Join("Adoptantes", "Adoptantes.AdoptanteId", "AdoptanteMascotas.AdoptanteId")
                 .Join("Mascotas", "Mascotas.MascotaId", "AdoptanteMascotas.MascotaId")
-                .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.MascotaId", "Adoptantes.AdoptanteId")
+                .Select("Adoptantes.Nombre", "Adoptantes.Apellido", "Adoptantes.Dni", "Adoptantes.Direccion", "Adoptantes.Telefono", "Adoptantes.Email", "Mascotas.Nombre as NombreAnimal", "Mascotas.MascotaId", "Adoptantes.AdoptanteId")
                 .Where("Mascotas.Adoptado", "=", false);
+
             var result = adoptante.Get<AdoptanteDto>();
 
             return result.ToList();

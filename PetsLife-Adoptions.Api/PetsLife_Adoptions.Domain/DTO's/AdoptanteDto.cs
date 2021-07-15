@@ -8,6 +8,7 @@
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
+        public string NombreAnimal { get; set; }
         public int MascotaId { get; set; }
         public int AdoptanteId { get; set; }
     }
